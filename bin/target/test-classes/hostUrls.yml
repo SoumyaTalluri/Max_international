@@ -1,0 +1,10 @@
+#      /**
+#       * @desc
+#       * Sequence generator service endpoints for different environments
+#       */
+
+config: 
+    dev: 'http://10.1.255.1799/'
+    qa: 'http://10.1.255.1799/'
+    stage: 'http://10.1.255.1799/'
+    prod: 'http://10.1.255.1799/'

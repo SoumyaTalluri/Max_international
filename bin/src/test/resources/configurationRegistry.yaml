@@ -1,0 +1,6 @@
+# Test Configuration Registry
+chrome:
+    mode: local
+    os: windows
+    browser: chrome
+    server : https://dev.roman3.io/signin

@@ -1,0 +1,18 @@
+timeout: 20
+
+expectedTitle: ISOMORPHIC
+
+elements:
+    userName: 
+        findBy: css
+        locator: input[placeholder="Email"]
+    password: 
+        findBy: css
+        locator: input[placeholder="Password"]
+    siginButton: 
+        findBy: css
+        locator: [type="submit"]
+    homePage: 
+        findBy: css
+        locator: li[class="isoUserEmail"]  
+        

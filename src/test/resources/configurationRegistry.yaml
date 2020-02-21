@@ -1,0 +1,6 @@
+# Test Configuration Registry
+chrome:
+    mode: local
+    os: windows
+    browser: chrome
+    server : http://vo.max.com

@@ -1,0 +1,107 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 23121969900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseSteps.setUp()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "[Login] To verify the user is able to sigin in the application",
+        "description": "",
+        "id": "isomorphic-sigin-screen;[login]-to-verify-the-user-is-able-to-sigin-in-the-application",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 203379600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on the sigin page",
+            "match": {
+              "location": "LoginStepDefinition.i_am_on_the_sigin_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 655030400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter the username \"nimittest20@gmail.com\" and the password \"Pass123@\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "nimittest20@gmail.com",
+                  "offset": 22
+                },
+                {
+                  "val": "Pass123@",
+                  "offset": 63
+                }
+              ],
+              "location": "LoginStepDefinition.i_enter_the_username_something_and_the_password_something(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 106803800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click on the sigin button",
+            "match": {
+              "location": "LoginStepDefinition.i_click_on_the_sigin_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2911659100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I will switch to home page and verify with \"nimittest20@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "nimittest20@gmail.com",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginStepDefinition.i_will_switch_to_home_page_and_verify_with_something(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@sigin"
+          },
+          {
+            "line": 5,
+            "name": "@demo"
+          }
+        ]
+      }
+    ],
+    "name": "Isomorphic sigin Screen",
+    "description": "",
+    "id": "isomorphic-sigin-screen",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  }
+]
