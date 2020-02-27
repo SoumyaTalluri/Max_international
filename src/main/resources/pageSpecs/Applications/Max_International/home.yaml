@@ -1,0 +1,24 @@
+timeout: 20
+
+expectedTitle: MAX
+
+elements:
+   english:
+        findBy: id
+        locator: en
+   countries:
+        findBy: xpath
+        locator: //h3[contains(text(),"Australia")]
+   memberlogin:
+        findBy: xpath
+        locator: //a[@href='/login/']
+   username:
+            findBy: id
+            locator: myusername
+   password:
+            findBy: id
+            locator: mypassword
+   loginbtn:
+           findBy: id
+           locator: submit
+                      
