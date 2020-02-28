@@ -9,6 +9,7 @@ import org.yaml.snakeyaml.Yaml;
 
 import com.max_international.automation.framework.ConfigurationRegistory;
 import com.max_international.automation.framework.TestSession;
+import com.max_international.login.po.HomePO;
 import com.max_international.login.po.LoginPO;
 import com.max_international.utils.PropFileHandler;
 
@@ -22,7 +23,7 @@ public class StepDefinitionInit {
 	Map<String, Object> options = new HashMap<String, Object>();
 	protected static TestSession session;
 	static LoginPO loginPO;
-
+	static HomePO homePo;
 
 	public TestSession getTestSession() throws Exception {
 
@@ -44,6 +45,7 @@ public class StepDefinitionInit {
 		}
 
 		loginPO = new LoginPO(session);
+		homePo = new HomePO(session);
 		
 		return session;
 	}
