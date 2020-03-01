@@ -5,5 +5,26 @@ Given User is in welcome page
 Then  Select language and location
 Then click on member login button
 Then  Title of page is login
+
+Scenario: [Login_02,03,04,05] To verify user is able to eneter valid credentials and login successfully
+Given User is in welcome page 
+Then  Select language and location
+Then click on member login button
+Then  Title of page is login
+Then check if the login button is disabled
 Then enter username and password
 And click on login
+
+Scenario Outline: [Login_06] To verify user is able to click the password field
+Given User is in welcome page 
+Then  Select language and location
+Then click on member login button
+Then  Title of page is login
+Then enter the <username> and <password>
+And click on login
+And Error message appears 
+
+
+Examples:
+        | username | password |
+        | fakejeff | 12345 |

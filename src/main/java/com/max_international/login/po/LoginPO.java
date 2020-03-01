@@ -1,3 +1,4 @@
+
 package com.max_international.login.po;
 
 import java.util.List;
@@ -29,5 +30,7 @@ public class LoginPO extends MobileWebViewPage {
 	public void checkSite() {
 		
 		System.out.println("I am on the sign page.");
+		//element("");
 	}
 }	
+ 

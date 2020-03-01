@@ -21,4 +21,6 @@ elements:
    loginbtn:
            findBy: id
            locator: submit
-                      
+   errormsg:
+      findBby: xpath
+      locator: //div[@class="alert alert-danger alert-dismissable"]

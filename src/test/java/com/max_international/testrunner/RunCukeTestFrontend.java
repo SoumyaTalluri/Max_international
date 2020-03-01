@@ -18,7 +18,8 @@ import cucumber.api.junit.Cucumber;
 
 				 glue = {"com.max_international.stepdefs"},
 				 
-						 tags= {"@sigin"}
+						 tags= {"@sigin"},
+						 monochrome= true
 )  
 				
 public class RunCukeTestFrontend {
