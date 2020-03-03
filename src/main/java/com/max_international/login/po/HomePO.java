@@ -34,12 +34,12 @@ public void title2() {
 	String home_title= session.driver.getTitle();
 	System.out.println(home_title);
 }
-public boolean isLoginBtnDisabled() {
+/*public boolean isLoginBtnDisabled() {
 	
 	boolean loginbtn = element("loginbtn").isEnabled();
 	return loginbtn;
 	
-}
+}*/
 public void credentials() {
 	element("myusername").sendKeys("fakejeff");
 	element("mypassword").click();

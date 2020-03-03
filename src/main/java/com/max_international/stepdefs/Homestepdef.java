@@ -28,14 +28,14 @@ public class Homestepdef extends StepDefinitionInit{
 
 		homePo.clickOnMemberBtn();
 	}
-	@And("^Title of page is login$")
+	 @Then("^Title of page is login$")
 	public void title_of_page_is_login() throws Throwable {
 		homePo.title2();
 	}
-	@Then("^check if the login button is disabled$")
+	/*@Then("^check if the login button is disabled$")
     public void check_if_the_login_button_is_disabled() throws Throwable {
         homePo.isLoginBtnDisabled();
-    }
+    }*/
 	@Then("^enter username and password$")
 	public void enter_username_and_password() throws Throwable {
 		
@@ -51,9 +51,9 @@ public class Homestepdef extends StepDefinitionInit{
     public void enter_the_and(String username, String password) throws Throwable {
 		 homePo.invalidCredentials(username,password);
     }
-	@And("^Error message appears $")
+	@And("^Error message appears$")
     public void error_message_appears() throws Throwable {
-        Assertequals(expected_msg,homePo.iserrorMsgAppear());
+       homePo.iserrorMsgAppear();
     }
 
 	  

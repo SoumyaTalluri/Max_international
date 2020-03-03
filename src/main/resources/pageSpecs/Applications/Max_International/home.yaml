@@ -11,16 +11,17 @@ elements:
         locator: //h3[contains(text(),"Australia")]
    memberlogin:
         findBy: xpath
-        locator: //a[@href='/login/']
+        locator: //a[@href='https://mymaxoffice.com/www/en/AU/login/']
+                                    
    username:
             findBy: id
-            locator: myusername
+            locator: username
    password:
             findBy: id
-            locator: mypassword
+            locator: password
    loginbtn:
            findBy: id
            locator: submit
    errormsg:
-      findBby: xpath
+      findBy: xpath
       locator: //div[@class="alert alert-danger alert-dismissable"]
