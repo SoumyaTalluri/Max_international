@@ -11,15 +11,15 @@ import cucumber.api.java.en.Then;
 
 public class Homestepdef extends StepDefinitionInit{
 	//static WebDriver driver;
-	@Given("^User is in welcome page$")
-	public void user_is_in_welcome_page() throws Throwable {
-		homePo.title();
+	@Given("^I am in welcome page$")
+	public void i_am_in_welcome_page() throws Throwable {
+		homePo.homePageTitle();
 	}
 
-	@Then("^Select language and location$")
-	public void select_language_and_location() throws Throwable {
+	@Then("^I select language and location$")
+	public void i_select_language_and_location() throws Throwable {
 
-		homePo.clickOnlanAndCountry();
+		homePo.clickOnLangAndCountry();
 
 	}
 
@@ -28,36 +28,36 @@ public class Homestepdef extends StepDefinitionInit{
 
 		homePo.clickOnMemberBtn();
 	}
-	 @Then("^Title of page is login$")
+	@Then("^Title of page is login$")
 	public void title_of_page_is_login() throws Throwable {
-		homePo.title2();
+		homePo.loginPageTitle();
 	}
-	/*@Then("^check if the login button is disabled$")
-    public void check_if_the_login_button_is_disabled() throws Throwable {
-        homePo.isLoginBtnDisabled();
-    }*/
+	@Then("^check if the login button is disabled$")
+	public void check_if_the_login_button_is_disabled() throws Throwable {
+		homePo.isLoginBtnDisabled();
+	}
 	@Then("^enter username and password$")
 	public void enter_username_and_password() throws Throwable {
-		
-		homePo.credentials();
+
+		homePo.validCredentials();
 	}
 
 	@And("^click on login$")
 	public void click_on_login() throws Throwable {
-		homePo.loginBtn();
+		homePo.clickOnLoginBtn();
 
 	}
 	@Then("^enter the (.+) and (.+)$")
-    public void enter_the_and(String username, String password) throws Throwable {
-		 homePo.invalidCredentials(username,password);
-    }
+	public void enter_the_and(String username, String password) throws Throwable {
+		homePo.invalidCredentials(username,password);
+	}
 	@And("^Error message appears$")
-    public void error_message_appears() throws Throwable {
-       homePo.iserrorMsgAppear();
-    }
+	public void error_message_appears() throws Throwable {
+		homePo.isErrorMsgAppear();
+	}
 
-	  
-	    }
+
+}
 
 
 

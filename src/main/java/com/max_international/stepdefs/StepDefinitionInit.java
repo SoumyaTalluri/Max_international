@@ -11,6 +11,7 @@ import com.max_international.automation.framework.ConfigurationRegistory;
 import com.max_international.automation.framework.TestSession;
 import com.max_international.login.po.HomePO;
 import com.max_international.login.po.LoginPO;
+import com.max_international.login.po.ProductPO;
 import com.max_international.utils.PropFileHandler;
 
 /**
@@ -24,6 +25,7 @@ public class StepDefinitionInit {
 	protected static TestSession session;
 	static LoginPO loginPO;
 	static HomePO homePo;
+	static ProductPO productPO;
 
 	public TestSession getTestSession() throws Exception {
 
@@ -46,7 +48,7 @@ public class StepDefinitionInit {
 
 		loginPO = new LoginPO(session);
 		homePo = new HomePO(session);
-		
+		productPO = new ProductPO(session);
 		return session;
 	}
 

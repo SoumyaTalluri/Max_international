@@ -1,0 +1,101 @@
+timeout: 20
+
+expectedTitle: MAX
+
+elements:
+   english:
+        findBy: id
+        locator: en
+   countries:
+        findBy: xpath
+        locator: //h3[text()="Canada"]
+   product:    
+         findBy: xpath
+         locator: //a[@href='/products/']
+   nutritionalImage:
+        findBy: xpath
+        locator: //img[@src='../images/product1.png']
+   nutritionalContainer:
+        findBy: xpath
+        locator: (//div[@class="container"])[4]
+   nutritionalText:
+          findBy: xpath
+          locator: //h3[text()="Nutritionals"]
+   nutritionalLink:
+          findBy: xpath
+          locator: (//a[@href="/products/nutritionals/"])[1]
+   learnMoreBtn:
+         findBy: xpath
+         locator: //a[@href='/products/nutritionals']
+   image:
+       findBy: xpath
+       locator: (//div[@class="image-card"])[1]
+   opportunityImage:
+        findBy: xpath
+        locator: //span[text()="Opportunity"]
+   productsWithPurposeImage:
+        findBy: xpath
+        locator: //span[text()="PRODUCTS WITH PURPOSE"]
+   maxGivesBackImage:
+        findBy: xpath
+        locator: //span[text()="MAX GIVES BACK"]
+   helpCenterImage:
+        findBy: xpath
+        locator: //span[text()="HELP CENTER"]
+   imageColor:
+        findBy: xpath
+        locator: (//div[@class="overlay-img bg-blue"])[2]
+   weightManagementLink:
+        findBy: xpath
+        locator: //a[text()="Weight Management"]
+   metaSwitchImage:
+       findBy: xpath
+       locator: //img[@src="https://maxintlmarketing.s3-us-west-2.amazonaws.com/images/product-pages/product-box-sidebar-metaSwitchBe.png"]
+   languagedrpdwn:
+       findBy: id
+       locator: languages
+   overlayImage:
+         findBy: xpath
+         locator: //div[@class="overlay-img bg-blue"]
+   countrydrpdwn:
+          findBy: id
+          locator: countries
+   foundationLink:
+          findBy: xpath
+          locator: //a[@href='/products/beauty/foundation/']
+   buynowBtn:
+           findBy: id
+           locator: for_sponsor_button
+   ournutritionalheading:
+        findBy: xpath
+        locator: //h3[text()="Our Nutritional Products"]
+   cellgivity:
+       findBy: xpath
+       locator: //strong[text()="Cellgevity"]
+   maxATP:
+       findBy: xpath
+       locator: //strong[text()="MaxATP"]
+   maxNFuze:
+       findBy: xpath
+       locator: //strong[text()="Max N-Fuze"]
+   maxONE:
+       findBy: xpath
+       locator: //strong[text()="MaxONE"]
+   maxGXL:
+       findBy: xpath
+       locator: //strong[text()="MaxGXL"]
+   max357:
+       findBy: xpath
+       locator: //strong[text()="Max357"]
+   nutritionalOptions:
+        findBy: xpath
+        locator: //div[@class="simple-card h-100"]
+   cellgivityheading:
+         findBy: xpath
+         locator: //h2[text()=" Here are some other products you might like:"]
+   subsign:
+          findBy: xpath
+          location: (//li[@class="sub-prod-qty"])[1]
+   addsign:
+          findBy: xpath
+          location: (//li[@class="add-prod-qty"])[1]

@@ -12,7 +12,6 @@ elements:
    memberlogin:
         findBy: xpath
         locator: //a[@href='https://mymaxoffice.com/www/en/AU/login/']
-                                    
    username:
             findBy: id
             locator: username

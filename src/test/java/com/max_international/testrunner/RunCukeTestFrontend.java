@@ -18,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 
 				 glue = {"com.max_international.stepdefs"},
 				 
-						 tags= {"@test"},
+						 tags= {"@sigin"},
 						 monochrome= true
 )  
 				
