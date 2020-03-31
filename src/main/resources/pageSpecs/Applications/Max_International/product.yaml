@@ -13,14 +13,14 @@ elements:
          findBy: xpath
          locator: //a[@href='/products/']
    nutritionalImage:
-        findBy: xpath
-        locator: //img[@src='../images/product1.png']
+         findBy: xpath
+         locator: //img[@src='../images/product1.png']
    nutritionalContainer:
-        findBy: xpath
-        locator: (//div[@class="container"])[4]
+         findBy: xpath
+         locator: (//div[@class="container"])[4]
    nutritionalText:
-          findBy: xpath
-          locator: //h3[text()="Nutritionals"]
+         findBy: xpath
+         locator: //h3[text()="Nutritionals"]
    nutritionalLink:
           findBy: xpath
           locator: (//a[@href="/products/nutritionals/"])[1]
@@ -49,14 +49,14 @@ elements:
         findBy: xpath
         locator: //a[text()="Weight Management"]
    metaSwitchImage:
-       findBy: xpath
-       locator: //img[@src="https://maxintlmarketing.s3-us-west-2.amazonaws.com/images/product-pages/product-box-sidebar-metaSwitchBe.png"]
+        findBy: xpath
+        locator: //img[@src="https://maxintlmarketing.s3-us-west-2.amazonaws.com/images/product-pages/product-box-sidebar-metaSwitchBe.png"]
    languagedrpdwn:
-       findBy: id
-       locator: languages
+        findBy: id
+        locator: languages
    overlayImage:
-         findBy: xpath
-         locator: //div[@class="overlay-img bg-blue"]
+        findBy: xpath
+        locator: //div[@class="overlay-img bg-blue"]
    countrydrpdwn:
           findBy: id
           locator: countries
@@ -95,7 +95,10 @@ elements:
          locator: //h2[text()=" Here are some other products you might like:"]
    subsign:
           findBy: xpath
-          location: (//li[@class="sub-prod-qty"])[1]
+          locator: (//li[@class="sub-prod-qty"])[1]
    addsign:
           findBy: xpath
-          location: (//li[@class="add-prod-qty"])[1]
+          locator: (//li[@class="add-prod-qty"])[1]
+   itemquantity:
+         findBy: xpath
+         locator: //li[@class="qty-product qty-product-id-NENUSA000102"]

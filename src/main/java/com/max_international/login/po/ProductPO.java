@@ -56,9 +56,9 @@ public void scrollPageToNutritionals() throws InterruptedException {
  }
  public boolean pageFullyLoaded() {
 	 boolean nutritional_page= false;
-	 ////String nutritional_title = element("Nutritional link").getText();
-	 //System.out.println(nutritional_title);
-	 //if(nutritional_title.equals("Nutritionals"))
+	 String nutritional_title = element("Nutritional link").getText();
+	 System.out.println(nutritional_title);
+	 if(nutritional_title.equals("Nutritionals"))
 		 nutritional_page= true;
 	 return nutritional_page;
  }
@@ -158,9 +158,9 @@ public void hoverOnProduct() {
 public void clickOnWeightManagement() {
 	element("weightManagementLink").click();
 }
-public void weightManagementPageOpen() {
-	String weight_title = session.driver.getTitle();
-	System.out.println(weight_title);
+public boolean weightManagementPageOpen(String weight_title) {
+	return session.driver.getTitle().contains(weight_title);
+	
 }
 public void scrollPageToMetaSwitch() {
 	WebElement metaswitch_image = element("metaSwitchImage");
@@ -168,9 +168,9 @@ public void scrollPageToMetaSwitch() {
 	
 	js.executeScript("arguments[0].scrollIntoView(true);",metaswitch_image);
 }
-public void metaSwitchPageOpen() {
-	String metaswitch_title = session.driver.getTitle();
-	System.out.println(metaswitch_title);
+public boolean metaSwitchPageOpen(String metaswitch_title) {
+	return session.driver.getTitle().contains(metaswitch_title);
+	
 	
 }
 public void selectLanguageFromDropDwn(String language) {
@@ -209,6 +209,10 @@ public void scrollDownFoundationPage() {
 }
 public void clickOnBuyNowBtn() {
 	element("buynowBtn").click();
+}
+
+public boolean checkTheBuyNowPage(String buynow_title){
+	return session.driver.getTitle().contains(buynow_title);
 }
 public void selectCountryFromDrpDwn(String country) throws InterruptedException {
 	Thread.sleep(3000);
@@ -271,8 +275,13 @@ public void clickOnAdd() {
 public void clickOnSubtract() {
 	element("subsign").click();
 }
-
-
+public boolean observeQuantityOfItem(){
+	boolean quantityofitem= false;
+	String attribute1= element("itemquantity").getText();
+	if(attribute1=="1")
+		quantityofitem= true;
+	return quantityofitem;
+}
 }
 	
 

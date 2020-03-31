@@ -8,6 +8,7 @@ import org.junit.Assert;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class Homestepdef extends StepDefinitionInit{
 	//static WebDriver driver;
@@ -16,12 +17,10 @@ public class Homestepdef extends StepDefinitionInit{
 		homePo.homePageTitle();
 	}
 
-	@Then("^I select language and location$")
-	public void i_select_language_and_location() throws Throwable {
-
-		homePo.clickOnLangAndCountry();
-
-	}
+	@When("^I select language and location$")
+    public void i_select_language_and_location() throws Throwable {
+        homePo.clickOnLangAndCountry();
+        }
 
 	@Then("^click on member login button$")
 	public void click_on_member_login_button() throws Throwable {

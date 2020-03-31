@@ -21,12 +21,12 @@ public class Productstepdef extends StepDefinitionInit {
 	    	Assert.assertTrue(productPO.isProductPageAppear());
         }
         
-		@Then("^I scroll the page down to the NUTRITIONALS$")
+		@When("^I scroll the page down to the NUTRITIONALS$")
         public void i_scroll_the_page_down_to_the_nutritionals() throws Throwable {
         	productPO.scrollPageToNutritionals();
         }
 
-        @Then("^I click on the Learn More$")
+        @When("^I click on the Learn More$")
         public void i_click_on_the_learn_more() throws Throwable {
             productPO.clickOnLearnMore();
         }
@@ -35,12 +35,12 @@ public class Productstepdef extends StepDefinitionInit {
         public void i_observe_the_page_open() throws Throwable {
             Assert.assertTrue(productPO.pageFullyLoaded());
         }
-        @Then("^I Scroll the page down towards the bottom of the page$")
+        @When("^I Scroll the page down towards the bottom of the page$")
         public void i_scroll_the_page_down_towards_the_bottom_of_the_page() throws Throwable {
             productPO.scrollDownTheProductPage();
         }
 
-        @Then("^I Hover over the (.+)$")
+        @When("^I Hover over the (.+)$")
         public void i_hover_over_the(String image) throws Throwable {
         	 productPO.hoverOnSelectedImage(image);
         }
@@ -49,7 +49,7 @@ public class Productstepdef extends StepDefinitionInit {
         	Assert.assertTrue(productPO.isImageHighlighted(image));
         }
      
-       @Then("^I click on the \"([^\"]*)\" page$")
+       @When("^I click on the \"([^\"]*)\" page$")
        public void i_click_on_the_something_page(String strArg1) throws Throwable {
     	   productPO.isSelectedPageOpened(strArg1);
        }
@@ -60,31 +60,31 @@ public class Productstepdef extends StepDefinitionInit {
         }
 
 
-        @Then("^I Hover on product$")
+        @When("^I Hover on product$")
         public void i_hover_on_product() throws Throwable {
             productPO.hoverOnProduct();
         }
 
-        @Then("^I click on the weight management$")
+        @When("^I click on the weight management$")
         public void i_click_on_the_weight_management() throws Throwable {
             productPO.clickOnWeightManagement();
         }
 
         @Then("^I observe page open$")
         public void i_observe_page_open() throws Throwable {
-        	productPO.weightManagementPageOpen();
+        	Assert.assertTrue(productPO.weightManagementPageOpen("Max International - Weight Management"));
         }
 
-        @Then("^I click on the product and then scroll down the page to the title \"([^\"]*)\"$")
+        @When("^I click on the product and then scroll down the page to the title \"([^\"]*)\"$")
         public void i_click_on_the_product_and_then_scroll_down_the_page_to_the_title_something(String strArg1) throws Throwable {
             productPO.scrollPageToMetaSwitch();
         }
 
         @And("^I check the page loaded$")
         public void i_check_the_page_loaded() throws Throwable {
-           productPO.metaSwitchPageOpen();
+           productPO.metaSwitchPageOpen("Max International - Switch");
         }
-        @Then("^I select the \"([^\"]*)\" language from dropdown$")
+        @When("^I select the \"([^\"]*)\" language from dropdown$")
         public void i_select_the_something_language_from_dropdown(String strArg1) throws Throwable {
             productPO.selectLanguageFromDropDwn(strArg1);
         }
@@ -94,41 +94,41 @@ public class Productstepdef extends StepDefinitionInit {
             Assert.assertTrue(productPO.observeProductBanner(strArg1));
         }
        
-        @Then("^I select \"([^\"]*)\" from country dropdown$")
+        @When("^I select \"([^\"]*)\" from country dropdown$")
         public void i_select_something_from_country_dropdown(String strArg1) throws Throwable {
         	productPO.selectLanguageFromDropDwn(strArg1);
         }
 
 
-        @Then("^I click on Foundation$")
+        @When("^I click on Foundation$")
         public void i_click_on_foundation() throws Throwable {
            productPO.clickOnFoundationPage();
         }
 
-        @Then("^I scroll down the foundation page$")
+        @When("^I scroll down the foundation page$")
         public void i_scroll_down_the_foundation_page() throws Throwable {
             productPO.scrollDownFoundationPage();
         }
 
-        @Then("^I click on buy now button$")
+        @When("^I click on buy now button$")
         public void i_click_on_buy_now_button() throws Throwable {
             productPO.clickOnBuyNowBtn();
         }
         @Then("^I observe the respective page open$")
         public void i_observe_the_respective_page_open() throws Throwable {
-           
+           Assert.assertFalse(productPO.checkTheBuyNowPage("Max International - Beauty"));
         }
-        @Then("^I Click on Nutritionals$")
+        @When("^I Click on Nutritionals$")
         public void i_click_on_nutritionals() throws Throwable {
             productPO.clickOnNutritionals();
         }
 
-        @Then("^I scroll down the Nutritionals page$")
+        @When("^I scroll down the Nutritionals page$")
         public void i_scroll_down_the_nutritionals_page() throws Throwable {
             productPO.scrollDownNutritionalPage();
         }
 
-        @Then("^I click on \"([^\"]*)\"$")
+        @When("^I click on \"([^\"]*)\"$")
         public void i_click_on_something(String strArg1) throws Throwable {
             productPO.clickOnSelectedOption(strArg1);
         }
@@ -157,16 +157,16 @@ public class Productstepdef extends StepDefinitionInit {
         public void i_observe_max357_page_open() throws Throwable {
         	Assert.assertTrue(productPO.observeThePageOpen("Max International - Max357"));
         }
-        @Then("^I scroll down the cellgevity page$")
+        @When("^I scroll down the cellgevity page$")
         public void i_scroll_down_the_cellgevity_page() throws Throwable {
             productPO.scrollDowntheCellgivitypage();
         }
-        @Then("^I click on add of any item$")
+        @When("^I click on add of any item$")
         public void i_click_on_add_of_any_item() throws Throwable {
            productPO.clickOnAdd();
         }
 
-        @Then("^I click on sub of any item$")
+        @When("^I click on sub of any item$")
         public void i_click_on_sub_of_any_item() throws Throwable {
            productPO.clickOnSubtract();
         }
@@ -174,7 +174,7 @@ public class Productstepdef extends StepDefinitionInit {
 
         @Then("^I observe the result$")
         public void i_observe_the_result() throws Throwable {
-            
+            Assert.assertTrue(productPO.observeQuantityOfItem());
         }
 
 }
