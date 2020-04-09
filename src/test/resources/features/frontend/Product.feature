@@ -125,8 +125,96 @@ Then I observe Max357 page open
 Scenario: To verify the user is able to decrease the item’s quantity when clicks on the ‘-’ button on all the nutritionals options
 When I click on the Products tab
 When I Hover on product
-When I click on "Cellgevity"
+When I click on Cellgevity link
 When I scroll down the cellgevity page
 When I click on add of any item
 When I click on sub of any item
 Then I observe the result
+
+Scenario: To verify that all the nutritonal category which appear inside the nutritionals page will also appear in the product header menu
+When I click on the Products tab
+When I Hover on product
+When I Click on Nutritionals
+When I scroll down the Nutritionals page
+@c1
+Scenario: To verify that user is able to play the header video
+When I Hover on product
+When I click on Cellgevity link
+When I click on the play button of the header video
+When I click on the play button inside
+@c2
+Scenario: To verify that user is able to add "Cellgevity 1 month supply" to the cart
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down till Cellgevity 1 month supply
+When I click on add to cart button
+@c3
+Scenario: To verify that user is able to open "Cellgevity Brochure"
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down till Cellgevity 1 month supply
+When I click on cellgevity "Brochure"
+Then I observe the cellgevity "Brochure"
+@c4
+Scenario: To verify that user is able to open "Cellgevity Ingredients"
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down till Cellgevity 1 month supply
+When I click on cellgevity "Ingredients"
+Then I observe the cellgevity "Ingredients"
+ 
+@c5
+Scenario: To verify that user is able to open "Cellgevity Product Sheet"
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down till Cellgevity 1 month supply
+When I click on cellgevity "Product Sheet"
+Then I observe the cellgevity "Product Sheet"
+@c6
+Scenario: To verify that user is able to open "Cellgevity Supplement Facts"
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down till Cellgevity 1 month supply
+When I click on cellgevity "Supplement Facts"
+Then I observe the cellgevity "Supplement Facts"
+@c7
+Scenario: To verify that user can see all other Products on Cellgevity page
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down the cellgevity page
+Then I click on > symbol
+Then I click on the < symbol
+@c8
+Scenario: To verify that user is able to add "Other Products" to the cart 
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down the cellgevity page
+When I click on add to cart button in cellgevity page
+Then I check the cart for items
+@c9
+Scenario: To verify that user is able to CheckOut "Other Products" 
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down the cellgevity page
+When I click on add to cart button in cellgevity page
+Then I check the cart for items
+When I click on checkout button
+Then I observe the checkout page open
+@c10
+Scenario: To verify that user is abe to go to the "Nutritionals" page by using the link on the page
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down till cellgevity link appear
+When I click on Nutritionals link
+Then I observe the nutritionals page
+
+
+
+
+
+
+
+
+
+
+

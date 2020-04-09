@@ -157,6 +157,10 @@ public class Productstepdef extends StepDefinitionInit {
         public void i_observe_max357_page_open() throws Throwable {
         	Assert.assertTrue(productPO.observeThePageOpen("Max International - Max357"));
         }
+        @When("^I click on Cellgevity link$")
+        public void i_click_on_cellgevity_link() throws Throwable {
+            productPO.cellegivityLink();
+        }
         @When("^I scroll down the cellgevity page$")
         public void i_scroll_down_the_cellgevity_page() throws Throwable {
             productPO.scrollDowntheCellgivitypage();
@@ -176,7 +180,75 @@ public class Productstepdef extends StepDefinitionInit {
         public void i_observe_the_result() throws Throwable {
             Assert.assertTrue(productPO.observeQuantityOfItem());
         }
+        @When("^I click on the play button of the header video$")
+        public void i_click_on_the_play_button_of_the_header_video() throws Throwable {
+        	productPO.clickOnCellgevityHeaderPlayBtn();
+        }
 
+        @When("^I click on the play button inside$")
+        public void i_click_on_the_play_button_inside() throws Throwable {
+           
+        }
+        @When("^I scroll down till Cellgevity 1 month supply$")
+        public void i_scroll_down_till_cellgevity_1_month_supply() throws Throwable {
+            productPO.scrollDownCellgevity1Monthsupply();
+        }
+
+        @When("^I click on add to cart button$")
+        public void i_click_on_add_to_cart_button() throws Throwable {
+           Assert.assertTrue(productPO.ItemInTheCart());
+        }
+        @When("^I click on cellgevity \"([^\"]*)\"$")
+        public void i_click_on_cellgevity_something(String strArg1) throws Throwable {
+            productPO.selectCellgevityOptions(strArg1);
+        }
+        @Then("^I observe the cellgevity \"([^\"]*)\" $")
+        public void i_observe_the_cellgevity_something(String strArg1) throws Throwable {
+            
+        }
+        @Then("^I click on > symbol$")
+        public void i_click_on_symbol() throws Throwable {
+        	Assert.assertTrue(productPO.isrightSymbolClickable());
+        }
+        @Then("^I click on the < symbol$")
+        public void i_click_on_the_symbol() throws Throwable {
+           Assert.assertTrue(productPO.isLeftSymbolClickable());
+        }
+        @When("^I click on add to cart button in cellgevity page$")
+        public void i_click_on_add_to_cart_button_in_cellgevity_page() throws Throwable {
+           productPO.clickOnCellgevityAddToCart();
+        }
+
+        @Then("^I check the cart for items$")
+        public void i_check_the_cart_for_items() throws Throwable {
+            Assert.assertTrue(productPO.ItemInTheCartofCellgevity());
+        }
+        @When("^I click on checkout button$")
+        public void i_click_on_checkout_button() throws Throwable {
+            productPO.clickONCheckOutBtn();
+        }
+
+        @Then("^I observe the checkout page open$")
+        public void i_observe_the_checkout_page_open() throws Throwable {
+            Assert.assertTrue(productPO.isCheckOutPageAppear("Max International - Create Account"));
+        }
+        @When("^I scroll down till cellgevity link appear$")
+        public void i_scroll_down_till_cellgevity_link_appear() throws Throwable {
+            productPO.scrollDownCellgevityText();
+        }
+
+        @When("^I click on Nutritionals link$")
+        public void i_click_on_nutritionals_link() throws Throwable {
+            productPO.clickOnNutritionalLink();
+        }
+       
+
+        @Then("^I observe the nutritionals page$")
+        public void i_observe_the_nutritionals_page() throws Throwable {
+            Assert.assertTrue(productPO.isNutritionalPageOpen("Max International - Nutritionals"));
+        }
+
+        
 }
 
         

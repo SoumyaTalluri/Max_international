@@ -3,8 +3,9 @@ package com.max_international.login.po;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Set;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -264,10 +265,15 @@ public boolean observeThePageOpen(String title) {
 	
 	return session.driver.getTitle().contains(title);
 }
-public void scrollDowntheCellgivitypage() {
-	WebElement ourcellgivitytxt = element("cellgivityheading");
+public void cellegivityLink(){
+	element("cellgivityLink").click();
+	
+}
+public void scrollDowntheCellgivitypage() throws InterruptedException {
+	Thread.sleep(3000);
+	WebElement maxgxlimage = element("maxgxlImage");
 	 JavascriptExecutor js = (JavascriptExecutor) session.driver;
-	js.executeScript("arguments[0].scrollIntoView(true);",ourcellgivitytxt);
+	js.executeScript("arguments[0].scrollIntoView(true);",maxgxlimage);
 }
 public void clickOnAdd() {
 	element("addsign").click();
@@ -278,11 +284,149 @@ public void clickOnSubtract() {
 public boolean observeQuantityOfItem(){
 	boolean quantityofitem= false;
 	String attribute1= element("itemquantity").getText();
-	if(attribute1=="1")
+	if(attribute1.equals("1"))
 		quantityofitem= true;
 	return quantityofitem;
 }
+public void clickOnCellgevityHeaderPlayBtn(){
+	element("cellgevityPlayButton").click();
 }
+public void clickOnCellgevityInsidePlayBtn(){
+	element("").click();
+}
+public void scrollDownCellgevity1Monthsupply(){
+	WebElement cellgevityonemonthsupply = element("cellgevityOneMonthSupply");
+	 JavascriptExecutor js = (JavascriptExecutor) session.driver;
+	js.executeScript("arguments[0].scrollIntoView(true);",cellgevityonemonthsupply);
+}
+public void clickOnAddToCart(){
+	element("cellgevityOneMonthSupplyAddtoCartBtn").click();
+}
+public boolean ItemInTheCart(){
+	boolean items;
+	items= false;
+	String itemInCart= element("cartImage").getText();
+	
+	System.out.println(itemInCart);
+	element("cellgevityOneMonthSupplyAddtoCartBtn").click();
+	String itemInCart1= element("cartImage").getText();
+	
+	System.out.println(itemInCart1);
+	if(itemInCart!=itemInCart1){
+		items= true;
+	}
+	return items;
+}
+public void selectCellgevityOptions(String options){
+	/*List<WebElement> cellgevityoptions = elements("cellgevityOptionslist");
+	for(WebElement c:cellgevityoptions){
+		if(c.getText().contains(options)){
+	        c.click();*/
+String selected_option = null;
+	
+	switch(options) {
+	case "Brochure":
+		selected_option= "cellgevityBrochure";
+	     break;
+	case "Ingredients":
+		selected_option= "cellgevityIngredients";
+	     break;
+	case "Product Sheet":
+		selected_option= "cellgevityProductSheet";
+	     break;
+	case "Supplement Facts":
+		selected_option= "cellgevitySupplementfacts";
+	     break;
+	}
+	element(selected_option).click();
+	}
+
+
+
+public boolean observeCellgevityOptions(){
+	boolean isCellgevityOption= false;
+	
+	return isCellgevityOption;
+	
+}
+public void clickOnRightMoveSymbol(){
+	element("rightHandSymbol").click();
+}
+public boolean isrightSymbolClickable(){
+	boolean rightsymbol= false;
+	WebElement ele= element("rightHandSymbol");
+	String rightSymbolAttribute= ele.getAttribute("aria-disabled").toString();
+	System.out.println(rightSymbolAttribute);
+	element("rightHandSymbol").click();
+	String rightSymbolAttribute1= ele.getAttribute("aria-disabled").toString();
+	if(rightSymbolAttribute1.equals("true"))
+		rightsymbol=true;
+	
+	
+	return rightsymbol;
+}
+public boolean isLeftSymbolClickable() throws InterruptedException{
+	Thread.sleep(5000);
+	boolean leftsymbol= false;
+	WebElement ele1= element("leftHandSymbol");
+	String leftSymbolAttribute= ele1.getAttribute("aria-disabled").toString();
+	System.out.println(leftSymbolAttribute);
+	element("leftHandSymbol").click();
+	String leftSymbolAttribute1= ele1.getAttribute("aria-disabled").toString();
+	if(leftSymbolAttribute1.equals("true"))
+		leftsymbol=true;
+	
+	
+	return leftsymbol;
+}
+public void clickOnCellgevityAddToCart(){
+	element("cellgevityOtherProductsAddToCart").click();
+}
+public boolean ItemInTheCartofCellgevity(){
+	boolean items;
+	items= false;
+	String itemInCart= element("cartImage").getText();
+	
+	System.out.println(itemInCart);
+	element("cellgevityOtherProductsAddToCart").click();
+	String itemInCart1= element("cartImage").getText();
+	
+	System.out.println(itemInCart1);
+	if(itemInCart!=itemInCart1){
+		items= true;
+	}
+	return items;
+}
+public void clickONCheckOutBtn() throws InterruptedException{
+	element("cartImage").click();
+	Thread.sleep(2000);
+	element("checkoutbtn").click();
+	Thread.sleep(2000);
+	element("notnowBtn").click();
+	Thread.sleep(2000);
+	
+	
+}
+public boolean isCheckOutPageAppear(String title){
+	
+	return session.driver.getTitle().contains(title);
+}
+public void scrollDownCellgevityText(){
+	WebElement cellgevityLinkText = element("cellgevityPlayButton");
+	 JavascriptExecutor js = (JavascriptExecutor) session.driver;
+	js.executeScript("arguments[0].scrollIntoView(true);",cellgevityLinkText);
+}
+public void clickOnNutritionalLink(){
+	element("nutritionallink").click();
+}
+public boolean isNutritionalPageOpen(String title){
+	return session.driver.getTitle().contains(title);
+	
+}
+
+}
+
+
 	
 
 

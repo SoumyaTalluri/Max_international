@@ -14,13 +14,13 @@ import cucumber.api.junit.Cucumber;
 							  "json:target/cucumber-report.json",
 					 		  "html:target/cucumber-report.html" }, 
 				
-				features = "src/test/resources/features/frontend/Home.feature",
+				features = "src/test/resources/features/frontend/product.feature",
 
 				 glue = {"com.max_international.stepdefs"},
 				 
-						 tags= {"@sigin"},
+						 tags= {"@p1,@c10"},
 						 monochrome= true
-)  
+)
 				
 public class RunCukeTestFrontend {
 
