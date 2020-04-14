@@ -14,11 +14,11 @@ import cucumber.api.junit.Cucumber;
 							  "json:target/cucumber-report.json",
 					 		  "html:target/cucumber-report.html" }, 
 				
-				features = "src/test/resources/features/frontend/product.feature",
+				features = "src/test/resources/features/frontend/Product.feature",
 
 				 glue = {"com.max_international.stepdefs"},
 				 
-						 tags= {"@p1,@c10"},
+						 
 						 monochrome= true
 )
 				

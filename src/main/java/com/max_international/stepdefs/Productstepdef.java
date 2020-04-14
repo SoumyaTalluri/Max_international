@@ -33,21 +33,31 @@ public class Productstepdef extends StepDefinitionInit {
 
         @And("^I observe the page open$")
         public void i_observe_the_page_open() throws Throwable {
-            Assert.assertTrue(productPO.pageFullyLoaded());
+            Assert.assertTrue(productPO.pageFullyLoaded("Max International - Nutritionals"));
         }
         @When("^I Scroll the page down towards the bottom of the page$")
         public void i_scroll_the_page_down_towards_the_bottom_of_the_page() throws Throwable {
             productPO.scrollDownTheProductPage();
         }
+        @When("^I Hover over the \"([^\"]*)\"$")
+        public void i_hover_over_the_something(String strArg1) throws Throwable {
+        	productPO.hoverOnSelectedImage(strArg1);
+        }
 
-        @When("^I Hover over the (.+)$")
+        @Then("^I Observe the image of the \"([^\"]*)\"$")
+        public void i_observe_the_image_of_the_something(String strArg1) throws Throwable {
+        	Assert.assertTrue(productPO.isImageHighlighted(strArg1));
+        }
+
+
+       /* @When("^I Hover over the (.+)$")
         public void i_hover_over_the(String image) throws Throwable {
         	 productPO.hoverOnSelectedImage(image);
         }
         @Then("^I Observe the image of the (.+)$")
         public void i_observe_the_image_of_the(String image) throws Throwable {
         	Assert.assertTrue(productPO.isImageHighlighted(image));
-        }
+        }*/
      
        @When("^I click on the \"([^\"]*)\" page$")
        public void i_click_on_the_something_page(String strArg1) throws Throwable {
@@ -247,6 +257,22 @@ public class Productstepdef extends StepDefinitionInit {
         public void i_observe_the_nutritionals_page() throws Throwable {
             Assert.assertTrue(productPO.isNutritionalPageOpen("Max International - Nutritionals"));
         }
+        @When("^I click on Ingredients$")
+        public void i_click_on_ingredients() throws Throwable {
+            productPO.clickOnIngredients();
+        }
+
+        @When("^I click on ingredient \"([^\"]*)\"$")
+        public void i_click_on_ingredient_something(String strArg1) throws Throwable {
+            productPO.clickOnIngredientOptions(strArg1);
+        }
+
+       
+        @Then("^I observe the ingredient \"([^\"]*)\"$")
+        public void i_observe_the_ingredient_something(String strArg1) throws Throwable {
+        	productPO.observeIngredientOption(strArg1);
+        }
+
 
         
 }

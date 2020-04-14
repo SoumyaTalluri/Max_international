@@ -208,6 +208,25 @@ When I scroll down till cellgevity link appear
 When I click on Nutritionals link
 Then I observe the nutritionals page
 
+@c11
+Scenario: To verify that the description of the content in "Ingredients" is present
+When I Hover on product
+When I click on Cellgevity link
+When I scroll down till Cellgevity 1 month supply
+When I click on Ingredients
+When I click on ingredient "RiboCeine"
+Then I observe the ingredient "RiboCeine"
+When I click on ingredient "Alpha Lipoic Acid"
+Then I observe the ingredient "Alpha Lipoic Acid"
+When I click on ingredient "Broccoli Seed Extract"
+Then I observe the ingredient "Broccoli Seed Extract"
+When I click on ingredient "Turmeric Root Extract"
+Then I observe the ingredient "Turmeric Root Extract"
+When I click on ingredient "Resveratrol"
+Then I observe the ingredient "Resveratrol"
+When I click on ingredient "Grape Seed"
+Then I observe the ingredient "Grape Seed"
+
 
 
 

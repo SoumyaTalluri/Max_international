@@ -55,13 +55,8 @@ public void scrollPageToNutritionals() throws InterruptedException {
 	 learnmoreBtn.click();
 	 
  }
- public boolean pageFullyLoaded() {
-	 boolean nutritional_page= false;
-	 String nutritional_title = element("Nutritional link").getText();
-	 System.out.println(nutritional_title);
-	 if(nutritional_title.equals("Nutritionals"))
-		 nutritional_page= true;
-	 return nutritional_page;
+ public boolean pageFullyLoaded(String title) {
+	 return session.driver.getTitle().contains(title);
  }
  public void scrollDownTheProductPage() throws InterruptedException {
 	 WebElement max_image = element("image");
@@ -318,10 +313,7 @@ public boolean ItemInTheCart(){
 	return items;
 }
 public void selectCellgevityOptions(String options){
-	/*List<WebElement> cellgevityoptions = elements("cellgevityOptionslist");
-	for(WebElement c:cellgevityoptions){
-		if(c.getText().contains(options)){
-	        c.click();*/
+	
 String selected_option = null;
 	
 	switch(options) {
@@ -422,6 +414,65 @@ public void clickOnNutritionalLink(){
 public boolean isNutritionalPageOpen(String title){
 	return session.driver.getTitle().contains(title);
 	
+}
+public void clickOnIngredients() throws InterruptedException{
+	element("ingredients").click();
+	Thread.sleep(3000);
+}
+public void clickOnIngredientOptions(String option){
+	String ingredientoption= null;
+	switch(option){
+	        case "RiboCeine":
+	        	ingredientoption= "riboceine";
+		          break;
+	        case "Alpha Lipoic Acid":
+	        	ingredientoption= "alphaliopicacid";
+		          break;
+	        case "Broccoli Seed Extract":
+	        	ingredientoption= "brocolliseedextract";
+		          break;
+	        case "Turmeric Root Extract":
+	        	ingredientoption= "turmericrootextract";
+		          break;
+	        case "Resveratrol":
+	        	ingredientoption= "resvertrol";
+		          break;
+	        case "Grape Seed":
+	        	ingredientoption= "grapeseedextract";
+		          break;
+		  }
+	  element(ingredientoption).click();
+	 }
+public boolean observeIngredientOption(String option){
+	boolean isIngredientOpen= false;
+	
+	String ingredientoption= null;
+	switch(option){
+	        case "RiboCeine":
+	        	ingredientoption= "riboceine";
+		          break;
+	        case "Alpha Lipoic Acid":
+	        	ingredientoption= "alphaliopicacid";
+		          break;
+	        case "Broccoli Seed Extract":
+	        	ingredientoption= "brocolliseedextract";
+		          break;
+	        case "Turmeric Root Extract":
+	        	ingredientoption= "turmericrootextract";
+		          break;
+	        case "Resveratrol":
+	        	ingredientoption= "resvertrol";
+		          break;
+	        case "Grape Seed":
+	        	ingredientoption= "grapeseedextract";
+		          break;
+		  }
+	WebElement element= element("ingredientattribute");
+	String ingredientOpen= element.getAttribute("class");
+	if(ingredientOpen.equals("btn__arrow"))
+		isIngredientOpen=true;
+	
+	    return isIngredientOpen;
 }
 
 }

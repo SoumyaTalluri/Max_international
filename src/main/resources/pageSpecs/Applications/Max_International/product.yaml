@@ -162,3 +162,28 @@ elements:
    margin:
         findBy: xpath
         locator: //ol[@class="breadcrumb margin-0"]
+   ingredients:
+        findBy: xpath
+        locator: //img[@src="//s3-us-west-2.amazonaws.com/maxintlmarketing/images/product-pages/ingredients-icon.svg"]
+   riboceine:
+        findBy: xpath
+        locator: //span[text()="Riboceine"]
+   alphaliopicacid:
+        findBy: xpath
+        locator: //span[text()="Alpha Lipoic Acid"]
+   brocolliseedextract:
+        findBy: xpath
+        locator: //span[text()="Broccoli Seed Extract"]
+   turmericrootextract:
+        findBy: xpath
+        locator: //span[text()="Turmeric Root Extract"]
+   resvertrol:
+        findBy: xpath
+        locator: //span[text()="Resveratrol"]
+   grapeseedextract:
+        findBy: xpath
+        locator: //span[text()="Grape Seed Extract"]
+   ingredientattribute:
+        findBy: xpath
+        locator: //a[@class="btn__arrow collapsed"]
+   
